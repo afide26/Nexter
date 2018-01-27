@@ -1,4 +1,33 @@
 .features {
-  background-color: $color-grey-light-2;
   grid-column: center-start/center-end;
+
+  margin: 15rem 0;
+
+  display: grid;
+  //grid-template-columns: repeat(3, 1fr);
+  //Responsive version
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+
+  display: grid;
+  grid-template-columns: [icon-start]min-content[icon-end text-start] 1fr [text-end];
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2rem;
+
+  &__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: $color-primary;
+    grid-row: 1/ span 2; //this is the alternative;
+    transform: translateY(-.5rem);
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    // grid-column: text-start/text-end; this can also be used;
+  }
 }
