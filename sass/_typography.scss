@@ -9,26 +9,52 @@
 
 .heading-2{
   @extend %heading;
+  
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+
+  &--light { color: $color-grey-light-1; }
+  &--dark { color: $color-grey-dark-1; }
 }
 
 .heading-3{
   @extend %heading;
+
+  color: $color-primary;
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
 .heading-4 {
   @extend %heading;
   font-size: 1.9rem;
-
-  &--light {
-    color: $color-grey-light-1;
-  }  
-  
-  &--dark {
-    color: $color-grey-dark-1;
-  }
-  
 }
 
 .heading-5{
   @extend %heading;
 }
+
+
+.btn {
+  background-color: $color-primary;
+  border:none;
+  border-radius: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+
+.mb-sm { margin-bottom: 2rem; }
+.mb-md { margin-bottom: 3rem; }
+.mb-lg { margin-bottom: 4rem; }
+.mb-hg { margin-bottom: 8rem; }
